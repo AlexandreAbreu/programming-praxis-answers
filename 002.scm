@@ -59,7 +59,7 @@
                  [max-factor (compute-max-factor n)]
                  )
         (if (or (null? factors) (> (car factors) max-factor))
-            (pretty-print (cons primes factors))
+            (pretty-print (append primes factors))
             (loop (non-multiples-of-from-list (car factors) factors)
                   (cons (car factors) primes)
                   max-factor)
